@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Transit Quiz v1.0</title>
+    <style type="text/css">
+    @font-face {
+        font-family: Headsign;
+        src: url({{ url_for('static', filename='font/Headsign.ttf')}});
+    }
+    </style>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <script src="{{ url_for('static', filename="js/app.js") }}"></script>
+</head>
+<body>
+    {% for arrival in arrivals_provider.get_arrivals() %}
+    <div class="headsign">
+        <div class="route">{{ arrival.route_id }}</div>
+        <div class="route-description">{{ arrival.route_headsign }}</div> 
+        <div class="route-arrivals">{{ arrival.arrival_times[:2] | join(', ') }} MIN</div>
+    </div>
+    {% endfor %}
+</body>
+</html>

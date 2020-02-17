@@ -1,0 +1,41 @@
+body {
+  background: #222 !important;
+}
+
+.headsign {
+  -webkit-user-select: none;
+  font-family: Headsign;
+  font-size: 62px;
+  text-transform: uppercase; 
+  background: rgb(0,0,0);
+  color: rgb(247, 170, 6);
+  width: 95%;
+  height: 125px;
+  left: auto;
+  right: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 0px;
+  margin-top: 10px; 
+  padding-left: 25px;
+  padding-top: 10px;
+}
+
+.headsign-via {
+  font-size: 44px; 
+}
+
+.route {
+  font-size: 44px; 
+  display: inline-block; 
+}
+
+.route-description {
+  display: inline-block; 
+}
+
+.route-arrivals {
+  display: inline-block; 
+  text-align: right; 
+  float: right; 
+}
